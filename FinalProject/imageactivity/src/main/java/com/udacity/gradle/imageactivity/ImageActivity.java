@@ -10,17 +10,17 @@ import android.widget.TextView;
 
 public class ImageActivity extends AppCompatActivity {
 
-    public static final String KEY_JOKE = "KEY_JOKE";
+    public static final String KEY_NAME = "KEY_NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
-        TextView jokeText = (TextView) findViewById(R.id.tv_joke);
+        TextView jokeText = (TextView) findViewById(R.id.hello);
         Intent intent = getIntent();
         if (intent != null) {
-            String joke = intent.getStringExtra(KEY_JOKE);
-            jokeText.setText(joke);
+            String message = intent.getStringExtra(KEY_NAME);
+            jokeText.setText(message);
         }
     }
 
