@@ -46,6 +46,11 @@ public class MainActivityTest {
     public void mainActivityTest() {
         onView(withId(R.id.tell_joke_btn)).check(matches(withText(R.string.button_text))).perform(click());
 
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            // nothing
+        }
         intended(allOf(
                 hasExtraWithKey(ImageActivity.KEY_NAME),
                 hasComponent(ImageActivity.class.getName())

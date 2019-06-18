@@ -47,7 +47,7 @@ public class MainActivityFragment extends Fragment {
                                 ((MainActivity) getActivity()).tellJoke(view);
                             }
                         }
-                ,3000);
+                        , 3000);
             }
         });
         MobileAds.initialize(getContext(),
